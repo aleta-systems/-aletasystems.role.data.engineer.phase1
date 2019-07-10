@@ -6,9 +6,9 @@ RUN mkdir /var/opt/sqlserver
  
 # copy attach-db.sh into container
 COPY restore-db.sh /var/opt/sqlserver
- 
-# copy backupfile
-COPY ./database/WideWorldImporters-Full.bak /var/opt/sqlserver
+
+# USE ADD 
+ADD https://github.com/aleta-systems/aletasystems.role.data.engineer.phase1/raw/master/database/WideWorldImporters-Full.bak /var/opt/sqlserver/
 
 # set script executable
 RUN ["chmod", "+x", "/var/opt/sqlserver/restore-db.sh"]
