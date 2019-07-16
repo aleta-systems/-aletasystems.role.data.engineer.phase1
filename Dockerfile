@@ -9,6 +9,7 @@ COPY restore-db.sh /var/opt/sqlserver
 
 # USE ADD 
 ADD https://github.com/aleta-systems/aletasystems.role.data.engineer.phase1/raw/master/database/WideWorldImporters-Full.bak /var/opt/sqlserver/
+ADD https://github.com/aleta-systems/aletasystems.role.data.engineer.phase1/raw/master/database/AdventureWorksLT2017.bak /var/opt/sqlserver/
 
 # set script executable
 RUN ["chmod", "+x", "/var/opt/sqlserver/restore-db.sh"]
